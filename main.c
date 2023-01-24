@@ -15,8 +15,17 @@
 
 void main(void) {
 	//call your initialisation functions to set up the hardware modules
+    Comp1_init();
+    Interrupts_init();
+    
+    //Set up LED RH3
+    LATHbits.LATH3=0;   //set initial output state
+    TRISHbits.TRISH3=0; //set TRIS value for pin (output)
 
     while (1) {
-		
+		__delay_ms(100);
+        PIR2bits.C1IF=1;
+                
+        
     }
 }

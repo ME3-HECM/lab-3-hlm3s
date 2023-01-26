@@ -27,7 +27,7 @@ void main(void) {
     
     LEDarray_disp_bin(31);
     
-    __delay_ms(1000);
+    __delay_ms(100);
 
     while (1) {
 //		__delay_ms(100);

@@ -30,9 +30,9 @@ void main(void) {
     __delay_ms(1000);
 
     while (1) {
-        unsigned int tval = TMR0L;
-        LEDarray_disp_bin(TMR0H);
-        //__delay_ms(1000);
+        unsigned int tval = get16bitTMR0val();
+        LEDarray_disp_bin(tval >> 8);
+        __delay_ms(1000);
                 
         
     }

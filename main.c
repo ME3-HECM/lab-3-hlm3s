@@ -25,14 +25,14 @@ void main(void) {
     LATHbits.LATH3=0;   //set initial output state
     TRISHbits.TRISH3=0; //set TRIS value for pin (output)
     
-    LEDarray_disp_bin(31);
+    LEDarray_disp_bin(600);
     
-    __delay_ms(100);
+    __delay_ms(1000);
 
     while (1) {
-//		__delay_ms(100);
-//        unsigned int tval = TMR0L;
-//        LEDarray_disp_bin(tval);
+        unsigned int tval = TMR0L;
+        LEDarray_disp_bin(TMR0H);
+        //__delay_ms(1000);
                 
         
     }

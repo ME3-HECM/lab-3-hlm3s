@@ -17,7 +17,7 @@
 void main(void) {
 	//call your initialisation functions to set up the hardware modules
     //Comp1_init();
-    //Interrupts_init();
+    Interrupts_init();
     LEDarray_init();
     Timer0_init();
     
@@ -25,8 +25,7 @@ void main(void) {
     LATHbits.LATH3=0;   //set initial output state
     TRISHbits.TRISH3=0; //set TRIS value for pin (output)
     
-    LEDarray_disp_bin(600);
-    LATHbits.LATH3 = 1;
+    //LATHbits.LATH3 = 1;
     
     //__delay_ms(1000);
 

@@ -16,8 +16,8 @@
 
 void main(void) {
 	//call your initialisation functions to set up the hardware modules
-    Comp1_init();
-    Interrupts_init();
+    //Comp1_init();
+    //Interrupts_init();
     LEDarray_init();
     Timer0_init();
     
@@ -26,13 +26,14 @@ void main(void) {
     TRISHbits.TRISH3=0; //set TRIS value for pin (output)
     
     LEDarray_disp_bin(600);
+    LATHbits.LATH3 = 1;
     
-    __delay_ms(1000);
+    //__delay_ms(1000);
 
     while (1) {
         unsigned int tval = get16bitTMR0val();
         LEDarray_disp_bin(tval >> 8);
-        __delay_ms(1000);
+        //__delay_ms(1000);
                 
         
     }

@@ -34,8 +34,8 @@ void __interrupt(high_priority) HighISR()
 	}
     
    if(PIR0bits.TMR0IF){ // check for overflow
-        TMR0H=0b00000001;            //put some ticks in hi and lo reg to get closer to one sec
-        TMR0L=0b00111101;
+        TMR0H=0b00001011;            //put some ticks in hi and lo reg to get closer to one sec
+        TMR0L=0b11011100;
        
        LATHbits.LATH3 = !LATHbits.LATH3; //toggle LED
        PIR0bits.TMR0IF=0; // clear interrupt flag

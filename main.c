@@ -25,13 +25,11 @@ void main(void) {
     LATHbits.LATH3=0;   //set initial output state
     TRISHbits.TRISH3=0; //set TRIS value for pin (output)
     
-    //LATHbits.LATH3 = 1;
-    
     //__delay_ms(1000);
 
     while (1) {
         unsigned int tval = get16bitTMR0val();
-        LEDarray_disp_bin(tval >> 8);
+        LEDarray_disp_bin(tval >> 8); // display only 8 MSBs
         //__delay_ms(1000);
                 
         
